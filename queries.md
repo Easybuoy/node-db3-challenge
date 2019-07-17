@@ -1,7 +1,7 @@
 # Database Queries
 
 ### Display the ProductName and CategoryName for all products in the database. Shows 76 records.
-SELECT ProductName, CategoryName FROM Products as p LEFT JOIN Categories as c ON p.ProductID = c.CategoryID;
+SELECT ProductName, CategoryName FROM Products as p LEFT JOIN Categories as c ON p.CategoryID = c.CategoryID;
 
 ### Display the OrderID and ShipperName for all orders placed before January 9, 1997. Shows 161 records.
 SELECT OrderId, ShipperName, OrderDate FROM Orders as o JOIN Shippers as s  WHERE o.OrderDate < "January 9, 1997" AND o.ShipperId = s.ShipperID;
