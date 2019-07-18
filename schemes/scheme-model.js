@@ -11,7 +11,7 @@ const findById = async id => {
 findSteps = async id => {
   return await db("schemes")
     .select("schemes.id", "scheme_name", "step_number", "instructions")
-    .join("steps")
+    .join("steps", "schemes.id", "scheme_id")
     .where({ scheme_id: id });
 };
 
